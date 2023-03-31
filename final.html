@@ -1,0 +1,59 @@
+<!-- class/01-html/02-signup.html -->
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <title>코드캠프 회원가입</title>
+    <link rel="stylesheet" href="./final.css">
+    <script src="./final.js"></script>
+</head>
+<body>
+  <div class="bigbox">
+    <div class="header__title">코드캠프 회원가입</div>
+    <div class="header__contents">
+      <input class="header__info__box" id="email" type="text" placeholder="이메일을 입력해주세요"><span class="info__error__box" id="emailerror"></span>
+      <input class="header__info__box" id="myname" type="text" placeholder="이름을 입력해주세요"><span class="info__error__box" id="mynameerror"></span>
+      <input class="header__info__box" id="pw1" type="password" placeholder="비밀번호를 입력해주세요"><span class="info__error__box" id="pw1error"></span>
+      <input class="header__info__box" id="pw2" type="password" placeholder="비밀번호를 다시 입력해주세요"><span class="info__error__box" id="pw2error"></span>
+    </div>
+    <div class="body__contents">
+      <div class="body__first__box">
+        <input class="first__phone__box" type="text" id="p1" maxlength="3" oninput="changefocus1()">-
+        <input class="first__phone__box" type="text" id="p2" maxlength="4" oninput="changefocus2()">-
+        <input class="first__phone__box" type="text" id="p3" maxlength="4" oninput="changefocus3()">
+      </div>
+      <div class="body__second__box">
+        <div class="second__auth__box">
+          <div class="second__auth__num" id="authnumber">000000</div>
+          <button class="second__auth__button" id="authnumberbox" disabled="true" onclick="auth()">인증번호 전송</button>
+        </div>
+        <div class="second__timer__box">
+          <div class="second__timer" id="timer">3:00</div>
+          <button class="second__timer__button" id="authcomp" disabled="true" onclick="authcomp()">인증확인</button>
+        </div>
+      </div>
+      <div class="body__third__box">
+        <select class="third__region" id="third__region">
+          <option disabled="true" selected="true">지역을 선택하세요.</option>
+          <option>서울</option>
+          <option>경기</option>
+          <option>인천</option>
+        </select>
+        <div class="region__error__box" id="regionerror"></div>
+      </div>
+    </div>
+    <div class="footer">
+      <div class="footer__first__box">
+        <div class="footer__gender">
+          <input type="radio" name="gender" id="woman"> <span>여성</span>
+          <input type="radio" name="gender" id="man"> <span>남성</span>
+        </div>
+        <div class="gender__error__box" id="gendererror"></div>
+      </div>
+      <div class="footer__divideLine"></div>
+      <button class="footer__join__button" id="join" disabled="true" onclick="joining()">가입하기</button>
+      <!-- 원래는 이렇게 사용했습니다. -->
+      <!-- <input type="button" value="가입하기"> -->
+    </div>
+  </div>
+</body>
+</html>
